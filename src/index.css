@@ -1,13 +1,369 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap .head {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid #ccc;
+}
+
+.wrap .main {
+  flex: 1;
+}
+
+.wrap .main .cont dl {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  position: relative;
+}
+
+.wrap .main .cont dl dt {
+  flex: 1;
+}
+
+.wrap .main .cont dl dd {
+  flex: 3;
+  margin-left: 10px;
+}
+
+.wrap .main .cont dl .add {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.wrap .main .cont dl .sub {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+}
+
+.wrap .main .cont dl .count {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  margin-top: -10px;
+}
+
+.wrap .main .cont dl .del {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+.shop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.shop .shopHead {
+  width: 100%;
+  height: 100px;
+}
+
+.shop .shopHead input {
+  width: 100%;
+  height: 50px;
+  text-indent: 3rem;
+}
+
+.shop .shopHead ul {
+  height: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.shop .shopHead ul li {
+  flex: 1;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.shop .main {
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+
+.shop .main dl {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  position: relative;
+}
+
+.shop .main dl dt {
+  flex: 1;
+}
+
+.shop .main dl dd {
+  flex: 3;
+  margin-left: 10px;
+}
+
+.shop .main dl .add {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.shop .main dl .sub {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+}
+
+.shop .main dl .count {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  margin-top: -10px;
+}
+
+.shop .main dl .del {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+.shop .foot {
+  width: 100%;
+  height: 50px;
+  background: #666;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.shop .foot .span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.shop .foot .span .cont {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.shop .foot button {
+  width: 100px;
+  height: 40px;
+  border-radius: 99px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-top: 5px;
+  color: white;
+}
+
+.shop .foot .active {
+  background: orangered;
+}
+
+.shop .shopcar {
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.shop .shopcar .box {
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.shop .shopcar .box dl {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  position: relative;
+}
+
+.shop .shopcar .box dl dt {
+  flex: 1;
+}
+
+.shop .shopcar .box dl dd {
+  flex: 3;
+  margin-left: 10px;
+}
+
+.shop .shopcar .box dl .add {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.shop .shopcar .box dl .sub {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+}
+
+.shop .shopcar .box dl .count {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  margin-top: -10px;
+}
+
+.vote {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vote header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.vote header h2 {
+  line-height: 50px;
+}
+
+.vote header span {
+  font-size: 12px;
+  line-height: 50px;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.vote .nav {
+  width: 100%;
+  height: 50px;
+}
+
+.vote .nav button {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+}
+
+.vote .car {
+  width: 100%;
+  flex: 1;
+}
+
+.vote .car dl {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  position: relative;
+}
+
+.vote .car dl dt {
+  flex: 1;
+}
+
+.vote .car dl dd {
+  flex: 3;
+  margin-left: 10px;
+}
+
+.vote .car dl .del {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+.vote footer {
+  width: 100%;
+  height: 50px;
+  background: #666;
+  text-align: center;
+  line-height: 50px;
+}
+
+.vote footer button {
+  font-size: 16px;
+  width: 80%;
+  height: 40px;
+  border-radius: 99px;
+  background: orangered;
+  color: white;
+  outline: none;
+  border: 1px solid #ccc;
 }
